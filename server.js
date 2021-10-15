@@ -9,9 +9,9 @@ const mockUserData=[
 	{name:'Jill'}
 ]
 
-app.get('/',function(req,res){
-  res.end('Hello world')
-}
+app.get('/', (req, res) => {
+  res.end('Hello World!');
+});
 
 app.get('/users',function(req,res){
 	res.json({
