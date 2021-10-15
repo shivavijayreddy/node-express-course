@@ -1,13 +1,17 @@
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
-
+const fs = require('fs')
 app.use(bodyParser.json())
 
 const mockUserData=[
 	{name:'Mark'},
 	{name:'Jill'}
 ]
+
+app.get('/',function(req,res){
+  res.end('Hello world')
+}
 
 app.get('/users',function(req,res){
 	res.json({
