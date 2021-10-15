@@ -13,6 +13,13 @@ app.get('/', (req, res) => {
   res.end('Hello World!');
 });
 
+//get request handler for movies.json
+app.get("/list_movies", (req, res) => {
+    fs.readFile(__dirname + '/' + 'movies.json', 'utf8', (err, data) => {
+        res.end(data);
+    });
+});
+
 app.get('/users',function(req,res){
 	res.json({
 		success: true,
